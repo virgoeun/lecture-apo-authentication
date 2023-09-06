@@ -1,5 +1,31 @@
+{{!-- the new version, with the session: --}}
+ 
+{{#if userInSession}}
+  <h2>Welcome, {{ userInSession.username }}!</h2>
+  <p>This is your profile page my friend!</p>
+  <button>
+    <a href="/userProfile">Reload the page</a>
+  </button>
+{{else}}
+  
+  <br><p>Still no logged in user, sorry!</p>
+ 
+{{/if}}
+
+
+{{!-- Old Version --}}
 {{!-- views/users/user-profile.hbs --}}
+   {{!-- {{#if user}}
+  <h2>Welcome, {{ user.username }}!</h2>
+  <p>This is your profile page my friend!</p>
+  <button>
+    <a href="/userProfile"> Reload the page </a>
+  </button>
+{{else}}
+  <p>Still no logged in user, sorry!</p>
+{{/if}}
 
-<p>This is {{user.username}} profile page my friend!</p>
-
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}} --}}
 
